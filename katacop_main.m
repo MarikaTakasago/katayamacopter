@@ -8,5 +8,5 @@ close all  %とりあえず全部閉じる
 load 'param.mat'
 load 'models.mat'
 
-%simulink：コンパイルまでやってくれる
+%simulink
 sim('katayamacopter.slx') 
