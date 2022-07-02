@@ -9,9 +9,13 @@
 プロジェクト終了時：`close_katacop.m`
 
 ## Description
-以下のスクリプトで変数とsimulinkの読み込み。最終的にはコメントアウト外せばシミュレーションの実行までできる
-```
-katacop_main.m
-```
+
+`katacop_main.m` : 変数とsimulinkの読み込み。最終的にはコメントアウト外せばシミュレーションの実行までできる
+
+`close_katacop.m` : simulinkの終了とワークスペースのお掃除
 
 ## TODO
+
+・x3とx5のrefって結局何？
+・制約の設定いちいちしなくていいようにする(めんどくさいから)
+
