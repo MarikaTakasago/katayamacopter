@@ -8,14 +8,14 @@ x5_delta = x5_target_angle / (length(t)-1); %calc x5_delta
 x5 = (0:x5_delta:x5_target_angle); %x5 (start:delta:end)
 
 %make ref
-x3_ref = zeros(2,length(t)); % 2rows:[t,x]
-x3_ref(1,:) = t; %input
-x3_ref(2,:) = x3;
+x3_ref = zeros(length(t),2); % 2rows:[t,x]
+x3_ref(:,1) = t; %input
+x3_ref(:,2) = x3;
 
-x5_ref = zeros(2,length(t));
-x5_ref(1,:) = t;
-x5_ref(2,:) = x5;
+x5_ref = zeros(length(t),2);
+x5_ref(:,1) = t;
+x5_ref(:,2) = x5;
 
 %option:if want to show trajectory
-figure;
-plot(t,x3,'g',t,x5,'b');
+%figure;
+%plot(t,x3,'g',t,x5,'b');
