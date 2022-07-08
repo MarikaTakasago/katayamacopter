@@ -6,9 +6,19 @@ close all  %とりあえず全部閉じる
 
 %諸々load
 load 'param.mat'
-load 'models.mat'
+
+%%
+
+%諸々作成
 make_ref
 make_mpcobject
 
-%simulink
-sim('katayamacopter.slx') 
+%%
+
+%open simulink
+open_system('katayamacopter.slx')
+
+%%
+%シミュレーションまで実行する時
+%まだ先のお話( ﾉД`)ｼｸｼｸ…
+sim('katayamacopter.slx')

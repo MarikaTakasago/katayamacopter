@@ -1,0 +1,10 @@
+u_sum : 左右のプロペラの出力の合計(0.5 ~ 3.9)
+u_diff : 左右のプロペラの出力の差(-0.5 ~ 1.5) ※ -1.5 or >= -u_sum とあるので安全みて -u_sum の最大値に
+x1 = θ, x2 =  dθ, x3 = φ, x4 = dφ, x5 = ψ, x6 = dψ 
+θ：-pi/4 ~ pi/4 (rad)
+φ：-0.7164 ~ 0.2 (rad)
+x5_ref：yaw角(travel , ψ)の目標角(多分制約ない？？)
+x3_ref：roll角(elev , φ)の目標角
+MPC_travelの(MPCブロックからの)出力の制約：θ
+MPC_elevの出力の制約：u_sum
+MPC_pitchの出力の制約：u_diff
