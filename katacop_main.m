@@ -6,7 +6,6 @@ close all  %とりあえず全部閉じる
 
 %諸々load
 load 'param.mat'
-load 'models.mat'
 
 %%
 
@@ -22,4 +21,4 @@ open_system('katayamacopter.slx')
 %%
 %シミュレーションまで実行する時
 %まだ先のお話( ﾉД`)ｼｸｼｸ…
-%sim('katayamacopter.slx')
+sim('katayamacopter.slx')
