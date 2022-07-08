@@ -10,12 +10,15 @@
 
 ## Description
 
-`katacop_main.m` : 変数とsimulinkの読み込み。最終的にはコメントアウト外せばシミュレーションの実行までできる
+`katacop_main.m` : 変数とsimulinkの読み込み。シミュレーションの実行までできる(けどScopeはなぜか立ち上がらないので自分で開けてください)
 
 `close_katacop.m` : simulinkの終了とワークスペースのお掃除
 
+`cleaner.m` : debug用。万が一叩いてしまったら`close`→`main`の順に立ち上げ直し
+
 ## TODO
 
-・x3とx5のrefって結局何？
 ・制約の設定いちいちしなくていいようにする(めんどくさいから)
+
+・To WorkSpace関数の作成
 
