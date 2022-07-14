@@ -12,9 +12,22 @@ x3_ref = zeros(length(t),2); % 2rows:[t;x]
 x3_ref(:,1) = t; %input
 x3_ref(:,2) = x3;
 
+x4_ref = zeros(length(t),2);
+x4_ref(:,1) = t;
+x4_ref(:,2) = 0.02;
+
 x5_ref = zeros(length(t),2);
 x5_ref(:,1) = t;
 %x5_ref(:,2) = x5;
+x6_ref = zeros(length(t),2);
+x6_ref(:,1) = t;
+
+x1_ref = zeros(length(t),2);
+x1_ref(:,1) = t;
+x1_ref(:,2) = pi/8;
+x2_ref = zeros(length(t),2);
+x2_ref(:,1) = t;
+x2_ref(1:10,2) = 0.01;
 
 %option:if want to show trajectory
 %figure;
