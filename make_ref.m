@@ -10,7 +10,7 @@ x5 = (0:x5_delta:x5_target_angle); %x5 (start:delta:end)
 %make ref
 x3_ref = zeros(length(t),2); % 2rows:[t;x]
 x3_ref(:,1) = t; %input
-x3_ref(:,2) = x3;
+%x3_ref(:,2) = x3;
 
 x4_ref = zeros(length(t),2);
 x4_ref(:,1) = t;
