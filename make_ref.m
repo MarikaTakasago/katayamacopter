@@ -14,20 +14,27 @@ x3_ref(:,1) = t; %input
 
 x4_ref = zeros(length(t),2);
 x4_ref(:,1) = t;
-x4_ref(:,2) = 0.02;
+%x4_ref(:,2) = 0.2;
 
 x5_ref = zeros(length(t),2);
 x5_ref(:,1) = t;
-%x5_ref(:,2) = x5;
+x5_ref(:,2) = pi/8;
 x6_ref = zeros(length(t),2);
 x6_ref(:,1) = t;
+x6_ref(1:10,2) = 0.01;
 
-x1_ref = zeros(length(t),2);
-x1_ref(:,1) = t;
-x1_ref(:,2) = pi/8;
 x2_ref = zeros(length(t),2);
 x2_ref(:,1) = t;
-x2_ref(1:10,2) = 0.01;
+%x2_ref(1:10,2) = 0.01;
+
+% for pitchonly_mpc %
+%x1_ref = zeros(length(t),2);
+%x1_ref(:,1) = t;
+%x1_ref(:,2) = pi/8;
+%x2_ref = zeros(length(t),2);
+%x2_ref(:,1) = t;
+%x2_ref(1:10,2) = 0.01;
+%%%%%%%%%%%%%%%%%%%%%
 
 %option:if want to show trajectory
 %figure;
