@@ -1,5 +1,5 @@
 %% サンプル時間を使用して MPC コントローラー オブジェクトを作成
-mpctravel = mpc(mpctravel_plant_C, 0.1);
+mpctravel = mpc(mpctravel_plant_C_1, 0.1);
 %% 予測ホライズンを指定
 mpctravel.PredictionHorizon = 30;
 %% 制御ホライズンを指定
@@ -17,6 +17,12 @@ mpctravel.Weights.MV = [0 0]*beta;
 mpctravel.Weights.MVRate = [0.1 0.1]/beta;
 mpctravel.Weights.OV = [1 1]*beta;
 mpctravel.Weights.ECR = 100000;
+%% 推定モデルのゲインに適用する全体の調整係数を指定
+alpha = 10;
+%% 既定の出力外乱モデルのゲインを調整
+setoutdist(mpctravel, 'model', getoutdist(mpctravel)*alpha);
+%% 既定の測定ノイズ モデルのゲインを調整
+mpctravel.Model.Noise = mpctravel.Model.Noise/alpha;
 %% シミュレーション オプションを指定
 options = mpcsimopt();
 options.RefLookAhead = 'off';
@@ -24,4 +30,4 @@ options.MDLookAhead = 'off';
 options.Constraints = 'on';
 options.OpenLoop = 'off';
 %% シミュレーションを実行
-sim(mpctravel, 101, mpctravel_RefSignal, mpctravel_MDSignal, options);
+sim(mpctravel, 501, mpctravel_RefSignal_1, mpctravel_MDSignal_1, options);

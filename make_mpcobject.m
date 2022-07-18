@@ -10,7 +10,7 @@ syselevetion = rss(2,2,3);
 syselevetion.D = [0 0 0;0 0 0];
 syselevetion.A = A_elev;
 syselevetion.B = [B_elev X1_elev];
-syselevetion.C = C_elev;
+syselevetion.C = [1 0;0 1];
 
 systrav = rss(2,2,3);
 systrav.D = [0 0 0;0 0 0];
