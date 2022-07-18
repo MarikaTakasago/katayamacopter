@@ -14,7 +14,7 @@
 
 `close_katacop.m` : simulinkの終了とワークスペースのお掃除
 
-`cleaner.m` : debug用。万が一叩いてしまったら`close`→`main`の順に立ち上げ直し
+`cleaner.m` : debug用。万が一叩いてしまったら`close`→`main`の順に立ち上げ直し。いずれgitignoreに追記します。
 
 ## TODO
 

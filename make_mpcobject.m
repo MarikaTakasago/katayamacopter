@@ -6,6 +6,27 @@ plant_elev = c2d(sys_elev,ts);
 plant_travel = c2d(sys_travel,ts);
 plant_pitch = c2d(sys_pitch,ts);
 
-mpcelev = mpc(plant_elev);
-mpctravel = mpc(plant_travel);
+syselevetion = rss(2,2,3);
+syselevetion.D = [0 0 0;0 0 0];
+syselevetion.A = A_elev;
+syselevetion.B = [B_elev X1_elev];
+syselevetion.C = [1 0;0 1];
+
+systrav = rss(2,2,3);
+systrav.D = [0 0 0;0 0 0];
+systrav.A = A_travel;
+systrav.B = [B_travel X1_travel];
+systrav.C = C_travel;
+
+setp_elev = setmpcsignals(syselevetion,'MV',[1 2],'MD',3);
+%setp_elev = setmpcsignals(plant_elev,'MV',[1 2],'MD',3);
+setp_travel = setmpcsignals(systrav,'MV',[1,2],'MD',3);
+%setp_travel = setmpcsignals(plant_travel,'MV',2,'MD',1);
+%setp_pitch = setmpcsignals(plant_pitch,'MV',1);
+
+%mpcelev = mpc(plant_elev);
+mpcelev = mpc(setp_elev,ts);
+%mpctravel = mpc(plant_travel);
+mpctravel = mpc(setp_travel,ts);
 mpcpitch = mpc(plant_pitch);
+%mpcpitch = mpc(setp_pitch,ts);
