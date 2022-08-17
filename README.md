@@ -10,15 +10,16 @@
 
 ## Description
 
-`katacop_main.m` : 変数とsimulinkの読み込み。シミュレーションの実行までできる(けどScopeはなぜか立ち上がらないので自分で開けてください)
+`katacop_main.m` : 変数とsimulinkの読み込み。シミュレーションの実行までできる
 
 `close_katacop.m` : simulinkの終了とワークスペースのお掃除
 
+`param.mat`の中の`x3(5)_target_angle`を編集することで目標角を変更できます。
+
 `cleaner.m` : debug用。万が一叩いてしまったら`close`→`main`の順に立ち上げ直し。いずれgitignoreに追記します。
+
 
 ## TODO
 
 ・制約の設定いちいちしなくていいようにする(めんどくさいから)
-
-・To WorkSpace関数の作成
 
